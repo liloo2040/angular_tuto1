@@ -12,7 +12,9 @@
 					<h1>Todo List</h1>
 				</header>
 				<section ng-controller="todoCtrl">
-					
+					<form id="todo-form" ng-submit="addTodo()">
+						<input id="new-todo" placeholder="Que devez-vous faire ?" ng-model="newTodo" />
+					</form>
 				</section>
 
 			</body>
