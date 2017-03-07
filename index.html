@@ -9,14 +9,15 @@
 		<script src="js/todoList.js"></script>
 	</head>
 			<body>
-				<header>
-					<h1>Todo List</h1>
-				</header>
-				<section ng-controller="todoCtrl">
-					<form id="todo-form" ng-submit="addTodo()">
-						<input id="new-todo" placeholder="Que devez-vous faire ?" ng-model="newTodo" />
-					</form>
-					<article ng-show="todos.length">
+			<div class="container">
+					<header>
+						<h1>Todo List</h1>
+					</header>
+						<section ng-controller="todoCtrl">
+							<form id="todo-form" ng-submit="addTodo()">
+								<input id="new-todo" placeholder="Que devez-vous faire ?" ng-model="newTodo" />
+							</form>
+						<article ng-show="todos.length">
 						<ul id="todo-list">
 							<li ng-repeat="todo in todos" ng-class="{completed: todo.completed}">
 								<div class="view">
@@ -29,8 +30,9 @@
 						<input id="mark-all" type="checkbox" ng-model="allChecked" ng-click="markAll(allChecked)" />
 						<label class="btn btn-info" for="mark-all">Tout cocher</label>
 						<button class="btn btn-danger" ng-click="clearCompletedTodos()">Supprimer les cases cochées</button>
-					</article>
-				</section>
+						</article>
+					</section>
+				</div>
 				<script
 			  src="https://code.jquery.com/jquery-3.1.1.min.js"
 			  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
